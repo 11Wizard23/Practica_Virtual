@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prueba Tecnica</title>
+		<link rel="stylesheet" href="./assets/css/normalize.css">
+		<link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+		<link rel="stylesheet" href="./assets/css/form.css">
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__titleAlogo">
+				<h1>
+					Virtual Llantas
+				</h1>
+			</div>
+			<div class="header__button__container">
+				<button class="header__button">Admin</button>
+			</div>
+		</header>
+
+		<main class="main">
+			<form class="form">
+				<div class="form__content__container">
+					<h1 class="form__tittle">Publicar</h1>
+					<div class="form__inputs__container">
+						<input class="form__input"  name="titulo" placeholder="Titulo" type="text" />
+						<input class="form__input"  name="email" placeholder="e-mail" type="email" />
+						<input id="input_imagen" class="form__input form__file" name="imagen" type="file" />
+						<label class="file__label" for="input_imagen"><p>Seleccionar Imagen</p></label>
+					</div>
+					<div class="form__textarea">
+						<textarea class="form__textarea" name="contenido" placeholder="contenido"></textarea>
+					</div>
+					<button class="form__submit" type="submit">Publicar</button>
+				</div>
+			</form>
+
+			<artcile>
+				<section>
+					<div>
+						<h3>Titulo</h3>
+						<p>Fecha</p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<img src="./assets/img/prueba.png" alt="titulo" />
+					</div>
+				</section>
+			</artcile>
+		</main>
+	</body>
+</html>
