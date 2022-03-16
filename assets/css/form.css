@@ -5,6 +5,7 @@
   padding: 25px;
   border-radius: var(--form-raius);
   background: rgb(70, 66, 66);
+  margin-bottom: 50px;
 }
 
 .form__tittle{

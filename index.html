@@ -5,17 +5,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Prueba Tecnica</title>
-		<link rel="stylesheet" href="./assets/css/normalize.css">
-		<link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-		<link rel="stylesheet" href="./assets/css/form.css">
+		<link rel="stylesheet" href="./assets/css/normalize.css" />
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/css/header.css" />
+		<link rel="stylesheet" href="./assets/css/form.css" />
+		<link rel="stylesheet" href="./assets/css/article.css" />
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__titleAlogo">
-				<h1>
-					Virtual Llantas
-				</h1>
+				<h1>Virtual Llantas</h1>
 			</div>
 			<div class="header__button__container">
 				<button class="header__button">Admin</button>
@@ -27,32 +26,92 @@
 				<div class="form__content__container">
 					<h1 class="form__tittle">Publicar</h1>
 					<div class="form__inputs__container">
-						<input class="form__input"  name="titulo" placeholder="Titulo" type="text" />
-						<input class="form__input"  name="email" placeholder="e-mail" type="email" />
-						<input id="input_imagen" class="form__input form__file" name="imagen" type="file" />
-						<label class="file__label" for="input_imagen"><p>Seleccionar Imagen</p></label>
+						<input
+							class="form__input"
+							name="titulo"
+							placeholder="Titulo"
+							type="text"
+						/>
+						<input
+							class="form__input"
+							name="email"
+							placeholder="e-mail"
+							type="email"
+						/>
+						<input
+							id="input_imagen"
+							class="form__input form__file"
+							name="imagen"
+							type="file"
+						/>
+						<label class="file__label" for="input_imagen"
+							><p>Seleccionar Imagen</p></label
+						>
 					</div>
 					<div class="form__textarea">
-						<textarea class="form__textarea" name="contenido" placeholder="contenido"></textarea>
+						<textarea
+							class="form__textarea"
+							name="contenido"
+							placeholder="contenido"
+						></textarea>
 					</div>
 					<button class="form__submit" type="submit">Publicar</button>
 				</div>
 			</form>
 
-			<artcile>
-				<section>
-					<div>
-						<h3>Titulo</h3>
-						<p>Fecha</p>
-					</div>
-				</section>
+			<hr />
+			<hr />
+			<hr />
 
-				<section>
-					<div>
-						<img src="./assets/img/prueba.png" alt="titulo" />
+			<div class="articles__place">
+				<article class="article">
+					<div class="article__header__container">
+						<div class="article__header">
+							<h3>Titulo</h3>
+							<p>Fecha</p>
+						</div>
 					</div>
-				</section>
-			</artcile>
+
+					<div class="article__body">
+						<div class="article__body__img__container">
+							<img class="article__body__img" src="./assets/img/prueba.png" alt="titulo" />
+						</div>
+						<div class="article__body__p__container">
+							<p class="article__body__p">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Suscipit optio deleniti facere ut ex praesentium veniam ducimus,
+								necessitatibus corporis, distinctio quisquam dolores cumque!
+								Voluptate aspernatur et ut delectus, necessitatibus nemo!
+							</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="article">
+					<div class="article__header__container">
+						<div class="article__header">
+							<h3>Titulo</h3>
+							<p>Fecha</p>
+						</div>
+					</div>
+
+					<div class="article__body">
+						<div class="article__body__img__container">
+							<img class="article__body__img" src="./assets/img/prueba.png" alt="titulo" />
+						</div>
+						<div class="article__body__p__container">
+							<p class="article__body__p">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Suscipit optio deleniti facere ut ex praesentium veniam ducimus,
+								necessitatibus corporis, distinctio quisquam dolores cumque!
+								Voluptate aspernatur et ut delectus, necessitatibus nemo!
+							</p>
+						</div>
+					</div>
+				</article>
+
+				
+			</div>
 		</main>
 	</body>
 </html>
