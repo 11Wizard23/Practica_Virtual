@@ -68,7 +68,9 @@
   height: 80px;
   padding: 5px;
   box-sizing: border-box;
-  border-radius: var(--input-radius)
+  border-radius: var(--input-radius);
+  resize: none;
+  
 }
 
 .form__submit{
@@ -79,4 +81,5 @@
   background: rgb(241, 42, 42);
   margin-top: 20px;
   color: white;
+  cursor: pointer;
 }
