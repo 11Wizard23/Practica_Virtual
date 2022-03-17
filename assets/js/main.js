@@ -8,17 +8,16 @@ class Entorno {
 		);
 		const resJson = await resString.json();
 		const { ok, publicaciones } = resJson;
+		let text = "";
 		if (ok) {
 			if (publicaciones.length > 0) {
-				let text = "";
 				publicaciones.map((publicacion) => {
 					const publi = new Publicacion(publicacion);
-					text +=  publi.renderPublicacion();
+					text += publi.renderPublicacion();
 				});
-        console.log(text)
-				return text;
 			}
 		}
+		return text;
 	}
 
 	async buildPublicaciones() {
@@ -26,27 +25,79 @@ class Entorno {
 	}
 }
 
-class Formulario extends (Entorno) {
+class Formulario extends Entorno {
 	constructor(form) {
-		super(form)
+		super(form);
 		this.form = form;
+		this.random = parseInt(Math.random() * (99999 - 11111) + 11111)
 	}
 
-  async sendData() {
-    const data = new FormData(this.form)
-    const resString = await fetch('http://localhost/prueba_tecnica/assets/php/publicaciones' , {
-      method: 'POST',
-      body: data
+	async sendData() {
+		const data = new FormData(this.form);
+		const emailRegex =
+			/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+		const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i
 
-    })
-    const resJson = await resString.json()
-		if(resJson.ok){
-			this.buildPublicaciones()
-			this.form.reset()
+		
+		if (data.get("titulo") == "") {
+			alert('Ingrese un titulo')
+			return;
 		}
-  }
+
+		if (!emailRegex.test(data.get("email"))) {
+			alert('Ingrese un e-mail correcto')
+
+			return;
+		}
+
+		if(data.get('img').size > 3000000){
+			alert('Elemento muy pesado, inserte otro')
+			return
+		}
+
+		if(!allowedExtensions.exec(data.get('img').name)){
+			alert('Ingrese una imagen\n Su extencion debe ser .jpg , .jpeg , .png , .gif ')
+			return
+		}
+
+		if(data.get('contenido') == ""){
+			alert('Ingrese contenido para la publicación')
+			return
+		}
+
+
+		if(parseInt(data.get('capt')) != this.random){
+			alert('Numero Captcha incorrecto')
+			this.chanNumber()
+			return
+		}
+
+		const resString = await fetch(
+			"http://localhost/prueba_tecnica/assets/php/publicaciones",
+			{
+				method: "POST",
+				body: data,
+			}
+		);
+
+
+
+		const resJson = await resString.json();
+		if (resJson.ok) {
+			this.buildPublicaciones();
+			this.form.reset();
+			this.chanNumber()
+			alert('Publicado con exito')
+		}
+	}
+
+	chanNumber(){
+		this.random = parseInt(Math.random() * (99999 - 11111) + 11111)
+		this.form.childNodes[1].childNodes[7].childNodes[3].childNodes[1].innerHTML = this.random
+	}
 
 	build() {
+		this.chanNumber()
 		this.form.addEventListener("submit", (e) => {
 			e.preventDefault();
 			this.sendData();
@@ -93,4 +144,4 @@ class Publicacion {
 const Entor = new Entorno();
 Entor.buildPublicaciones(); // Hacemos que las publicaciones Carguen
 const Formu = new Formulario(form);
-Formu.build();  //Agregamos el listener al formulario para realizar el registro de datos
+Formu.build(); //Agregamos el listener al formulario para realizar el registro de datos

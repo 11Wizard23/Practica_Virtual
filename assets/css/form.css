@@ -83,3 +83,20 @@
   color: white;
   cursor: pointer;
 }
+
+.form__nospam{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nospam__input{
+  display: flex;
+  gap: 20px;
+}
+
+.nospam__input input{
+  border-radius: var(--input-radius);
+  border: none;
+}

@@ -21,10 +21,12 @@ if(!isset($rutaArray[4])){
 //  el direccionamiento a las funciones
 
 if($method == 'GET'){
+  //Obtener publicaciones
   $rutaArray[4] == 'publicaciones' ? $Api->getPublicaciones() : null;
 }
 
 else if($method == 'POST'){
+  //Realizar una publicacion
   $rutaArray[4] == 'publicaciones' ? $Api->postPublicacion() : null;
 }
 

@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="./assets/css/header.css" />
 		<link rel="stylesheet" href="./assets/css/form.css" />
 		<link rel="stylesheet" href="./assets/css/article.css" />
+
 	</head>
 	<body>
 		<header class="header">
@@ -17,7 +18,9 @@
 				<h1>Virtual Llantas</h1>
 			</div>
 			<div class="header__button__container">
-				<button class="header__button">Admin</button>
+				<a href="./pages/adminLogin/">
+					<button class="header__button">Admin</button>
+				</a>
 			</div>
 		</header>
 
@@ -55,6 +58,17 @@
 							placeholder="contenido"
 						></textarea>
 					</div>
+
+					<div class="form__nospam">
+						<p>Digita lo Siguiente</p>
+						<div class="nospam__input">
+							<div id="nospam">
+							</div>
+							<input name="capt" type="text">
+								
+						</div>
+					</div>
+
 					<button class="form__submit" type="submit">Publicar</button>
 				</div>
 			</form>
@@ -64,35 +78,10 @@
 			<hr />
 
 			<div id="articles_place" class="articles__place">
-
-
-				<!-- <article class="article">
-					<div class="article__header__container">
-						<div class="article__header">
-							<h3>Titulo</h3>
-							<p>Fecha</p>
-						</div>
-					</div>
-
-					<div class="article__body">
-						<div class="article__body__img__container">
-							<img class="article__body__img" src="./assets/img/prueba.png" alt="titulo" />
-						</div>
-						<div class="article__body__p__container">
-							<p class="article__body__p">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Suscipit optio deleniti facere ut ex praesentium veniam ducimus,
-								necessitatibus corporis, distinctio quisquam dolores cumque!
-								Voluptate aspernatur et ut delectus, necessitatibus nemo!
-							</p>
-						</div>
-					</div>
-				</article> -->
-
-				
 			</div>
 		</main>
 
+		<script src="https://unpkg.com/i-am-not-a-robot/dist/i-am-not-a-robot.min.js"></script>
 		<script src="./assets/js/main.js"></script>
 	</body>
 </html>
