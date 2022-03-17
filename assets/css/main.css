@@ -19,6 +19,19 @@ html{
   align-items: center;
 }
 
+.admin__main{
+  display: flex;
+  flex-direction: row;
+}
+
+@media(max-width: 900px){
+  .admin__main{
+    flex-direction: column;
+  }
+}
+
+
+
 hr{
   width: 100%;
   margin-top: 5px;

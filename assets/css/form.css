@@ -1,4 +1,15 @@
 
+.formes{
+  display:  flex;
+  flex-direction:  row;
+  gap:  30px;
+}
+
+@media(max-width: 770px){
+  .formes{
+    flex-direction:  column;
+  }
+}
 
 .form{
   width: 300px;
@@ -7,6 +18,8 @@
   background: rgb(70, 66, 66);
   margin-bottom: 50px;
 }
+
+
 
 .form__tittle{
   margin: 0;
@@ -89,8 +102,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white
 }
 
+#nospam , #nospam2{
+  -webkit-user-select: none;/* Chrome  y Safari */ 
+     -moz-user-select: none;/* Firefox */
+      -ms-user-select: none;/* IE 10+ */ 
+          user-select: none;
+}
+F
 .nospam__input{
   display: flex;
   gap: 20px;

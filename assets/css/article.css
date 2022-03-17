@@ -18,17 +18,33 @@
 	color: white;
 }
 
+.article__admin{
+	width: 100%;
+	align-items: baseline;
+	padding: 0 20px;
+}
+
+
 .article__header__container {
 	width: 100%;
 }
 
 .article__header {
+	gap: 30px;
+	width: fit-content;
 	display: flex;
 	justify-content: space-between;
 	border-bottom: solid 2px black;
 	background: rgb(70, 66, 66);
 	padding: 0 20px;
 	place-items: center;
+}
+@media(max-width: 800px){
+	.article__header{
+		flex-direction:  column;
+		gap:  2px;
+	}
+	
 }
 
 .article__body {
@@ -37,7 +53,10 @@
 	gap: 40px;
 }
 
-.article__body__img__container {
+.article__body__img__container__admin {
+	max-height:  250px;
+	max-width:  250px;
+
 }
 
 .article__body__img {

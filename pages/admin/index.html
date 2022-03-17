@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Administrador/</title>
+		<link rel="stylesheet" href="../../assets/css/normalize.css" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="stylesheet" href="../../assets/css/header.css" />
+		<link rel="stylesheet" href="../../assets/css/article.css" />
+    <link rel="stylesheet" href="../../assets/css/list.css">
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__titleAlogo">
+				<h1 id="titulo"></h1>
+			</div>
+			<div class="header__button__container">
+				<button id="logout" class="header__button">Log Out</button>
+			</div>
+		</header>
+
+		<main class="main admin__main">
+			<table class="admin__table">
+				<thead>
+					<th>id</th>
+					<th>titulo</th>
+					<th>Detalles</th>
+				</thead>
+				<tbody id="tbody"></tbody>
+			</table>
+			<div id="articles_place"></div>
+
+		</main>
+		<script src="../../assets/js/admin.js"></script>
+		<script src="../../assets/js/viewToken.js"></script>
+	</body>
+</html>
