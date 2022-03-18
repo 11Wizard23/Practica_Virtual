@@ -1,4 +1,4 @@
-#Tabla de publicaciones
+---Tabla de publicaciones, necesatia para el funcionamiento
 CREATE TABLE `prueba`.`publicaciones` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(255) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `prueba`.`publicaciones` (
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
-#Tabla de usuarios
+---Tabla de usuarios, necesaria para el funcionamiento
 CREATE TABLE `prueba`.`admins` (
   `id` BIGINT(12) NOT NULL,
   `nombre` VARCHAR(255) NOT NULL,
