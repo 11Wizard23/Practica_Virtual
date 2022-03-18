@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="./assets/css/header.css" />
 		<link rel="stylesheet" href="./assets/css/form.css" />
 		<link rel="stylesheet" href="./assets/css/article.css" />
-
 	</head>
 	<body>
 		<header class="header">
@@ -25,7 +24,10 @@
 		</header>
 
 		<main class="main">
-			<form class="form" id="form">
+
+			<button id="openForm" class="form__submit">Realizar publicación</button>
+
+			<form class="form showed" id="form">
 				<div class="form__content__container">
 					<h1 class="form__tittle">Publicar</h1>
 					<div class="form__inputs__container">
@@ -62,10 +64,8 @@
 					<div class="form__nospam">
 						<p>Digita lo Siguiente</p>
 						<div class="nospam__input">
-							<div id="nospam">
-							</div>
-							<input name="capt" type="text">
-								
+							<div id="nospam"></div>
+							<input name="capt" type="text" />
 						</div>
 					</div>
 
@@ -77,9 +77,9 @@
 			<hr />
 			<hr />
 
-			<div id="articles_place" class="articles__place">
-			</div>
+			<div id="articles_place" class="articles__place"></div>
 		</main>
+
 
 		<script src="https://unpkg.com/i-am-not-a-robot/dist/i-am-not-a-robot.min.js"></script>
 		<script src="./assets/js/main.js"></script>

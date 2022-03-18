@@ -11,6 +11,14 @@
   }
 }
 
+#openForm{
+  margin: 20px;
+}
+
+.showed{
+  display: none;
+}
+
 .form{
   width: 300px;
   padding: 25px;

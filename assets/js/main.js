@@ -1,4 +1,5 @@
 const form = document.getElementById("form");
+const openForm = document.getElementById('openForm')
 const articlesPlace = document.getElementById("articles_place");
 
 class Entorno {
@@ -31,6 +32,10 @@ class Formulario extends Entorno {
 		this.form = form;
 		this.random = parseInt(Math.random() * (99999 - 11111) + 11111)
 	}
+
+	toogleShow(){
+		this.form.classList.toggle('showed')
+	} 
 
 	async sendData() {
 		const data = new FormData(this.form);
@@ -88,6 +93,7 @@ class Formulario extends Entorno {
 			this.form.reset();
 			this.chanNumber()
 			alert('Publicado con exito')
+			this.toogleShow()
 		}
 	}
 
@@ -145,3 +151,6 @@ const Entor = new Entorno();
 Entor.buildPublicaciones(); // Hacemos que las publicaciones Carguen
 const Formu = new Formulario(form);
 Formu.build(); //Agregamos el listener al formulario para realizar el registro de datos
+openForm.addEventListener('click' , () => {
+	Formu.toogleShow()
+}) 
